@@ -16,12 +16,7 @@
       }
 
       body {
-        font-family:
-          "Inter",
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          sans-serif;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         background: linear-gradient(to bottom right, #0f172a, #6d28d9, #0f172a);
         color: #ffffff;
         line-height: 1.6;
@@ -289,6 +284,12 @@
         transform: scale(1.05);
       }
 
+      .btn-small {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.875rem;
+        text-decoration: none;
+      }
+
       .hero-image-mobile {
         display: block;
         position: relative;
@@ -413,7 +414,6 @@
         font-size: 1.125rem;
         color: #d1d5db;
         line-height: 1.6;
-        font-weight: bold;
       }
 
       /* Projects Section */
@@ -451,11 +451,20 @@
         padding: 2rem;
         position: relative;
         transition: all 0.3s ease;
+        display: block;
+        text-decoration: none;
+        color: inherit;
       }
 
       .project-card:hover {
-        border-color: rgba(11, 230, 146, 0.5);
-        box-shadow: 0 10px 15px -3px rgba(255, 0, 47, 0.1);
+        border-color: rgba(168, 85, 247, 0.8);
+        background: linear-gradient(
+          to bottom right,
+          rgba(30, 41, 59, 0.8),
+          rgba(15, 23, 42, 0.8)
+        );
+        box-shadow: 0 0 30px rgba(168, 85, 247, 0.5), 0 10px 30px rgba(219, 39, 119, 0.3);
+        transform: translateY(-5px);
       }
 
       .project-title {
@@ -597,6 +606,7 @@
       }
     </style>
   </head>
+
   <body>
     <!-- Navigation -->
     <nav>
@@ -639,11 +649,14 @@
             <h1 class="hero-title">
               My <span class="hero-title-gradient">Portfolio</span>
             </h1>
-            <p class="hero-subtitle">Web Developer | Designer | Video Editor</p>
+            <p class="hero-subtitle">
+              Web Developer | Designer | Video Editor
+            </p>
             <p class="hero-text">
               Hello! My name is Anurag Prasad Chaurasia. I am passionate about
               Web development and love creating clean, responsive websites. I
-              enjoy learning new technologies which helps improving my skills every day and i'm currenty learning JAVA.
+              enjoy learning new technologies which helps improving my skills
+              every day and i'm currenty learning JAVA.
             </p>
             <div class="hero-buttons">
               <button class="btn" onclick="scrollToSection('contact')">
@@ -697,11 +710,21 @@
         </div>
         <div class="about-card">
           <p class="about-text">
-           Hey...! Myself Anurag, a multiskilled digital creator specializing in Web Development, Web Design, Prompt Engineering, and Video Editing. I build responsive, performance-driven interfaces using HTML, CSS, JavaScript, React.js, and design clean, functional UI/UX in Figma.
-
-I also create polished video content with DaVinci Resolve, ensuring visual consistency across web and media. My prompt engineering skills help me integrate AI tools to streamline workflows and produce optimized digital assets.
-
-I focus on delivering work that is visually refined, technically strong, and aligned with user and brand goals.
+            Hey...! Myself Anurag, a multiskilled digital creator
+            specializing in Web Development, Web Design, Prompt Engineering,
+            and Video Editing. I build responsive, performance-driven
+            interfaces using HTML, CSS, JavaScript, React.js, and design
+            clean, functional UI/UX in Figma.
+            <br />
+            <br />
+            I also create polished video content with DaVinci Resolve,
+            ensuring visual consistency across web and media. My prompt
+            engineering skills help me integrate AI tools to streamline
+            workflows and produce optimized digital assets.
+            <br />
+            <br />
+            I focus on delivering work that is visually refined, technically
+            strong, and aligned with user and brand goals.
           </p>
         </div>
       </div>
@@ -712,7 +735,7 @@ I focus on delivering work that is visually refined, technically strong, and ali
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">
-             <span class="hero-title-gradient">My Projects</span>
+            <span class="hero-title-gradient">My Projects</span>
           </h2>
           <div class="section-divider"></div>
         </div>
@@ -722,12 +745,42 @@ I focus on delivering work that is visually refined, technically strong, and ali
             <p class="project-description">
               A simple personal website built with HTML, CSS and JavaScript.
             </p>
+            <a
+              href="https://anurag-pi.vercel.app"
+              class="btn btn-small"
+              style="display: inline-flex; margin-top: 1rem;"
+            >
+              View
+            </a>
           </div>
           <div class="project-card">
             <h3 class="project-title">Simple Calculator</h3>
             <p class="project-description">
               A responsive calculator which performs arithmetic operations.
             </p>
+            <a
+              href="https://anurag-pi.vercel.app"
+              class="btn btn-small"
+              style="display: inline-flex; margin-top: 1rem;"
+            >
+              View
+            </a>
+          </div>
+          <div class="project-card">
+            <h3 class="project-title">School Webpage</h3>
+            <p class="project-description">
+              An educational website for school information and resources
+              built with HTML, CSS and JavaScript.
+            </p>
+            <a
+              href="https://rangposss.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-small"
+              style="display: inline-flex; margin-top: 1rem;"
+            >
+              View
+            </a>
           </div>
         </div>
       </div>
@@ -767,6 +820,7 @@ I focus on delivering work that is visually refined, technically strong, and ali
               <a
                 href="https://github.com/Venom-dev-hub"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="social-btn social-btn-github"
               >
                 <svg
@@ -774,19 +828,13 @@ I focus on delivering work that is visually refined, technically strong, and ali
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
-                  <path
-                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                  />
-                </svg>
-              </a>
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                  <circle cx="12" cy="12" r="4" fill="#0f172a" />
-                  <circle cx="17.5" cy="6.5" r="1.5" fill="#0f172a" />
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                 </svg>
               </a>
               <a
                 href="https://www.facebook.com/profile.php?id=100078946456457"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="social-btn social-btn-facebook"
               >
                 <svg
@@ -794,9 +842,7 @@ I focus on delivering work that is visually refined, technically strong, and ali
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
-                  <path
-                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-                  />
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                 </svg>
               </a>
             </div>
@@ -815,30 +861,23 @@ I focus on delivering work that is visually refined, technically strong, and ali
     </footer>
 
     <script>
-      let mobileMenuOpen = false;
-
-      function toggleMobileMenu() {
-        mobileMenuOpen = !mobileMenuOpen;
+      function scrollToSection(id) {
         const mobileMenu = document.getElementById("mobileMenu");
-        if (mobileMenuOpen) {
-          mobileMenu.classList.add("active");
-        } else {
+        if (mobileMenu && mobileMenu.classList.contains("active")) {
           mobileMenu.classList.remove("active");
         }
-      }
-
-      function scrollToSection(id) {
-        mobileMenuOpen = false;
-        const mobileMenu = document.getElementById("mobileMenu");
-        mobileMenu.classList.remove("active");
         const element = document.getElementById(id);
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
         }
       }
-    </script>
 
-    <!-- Vercel Web Analytics -->
-    <script defer src="https://cdn.vercel-analytics.com/v1/script.js"></script>
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById("mobileMenu");
+        if (mobileMenu) {
+          mobileMenu.classList.toggle("active");
+        }
+      }
+    </script>
   </body>
 </html>
